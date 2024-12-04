@@ -1,0 +1,130 @@
+@media (max-width: 768px) {
+
+	.form-aside {
+		grid-template-columns: 1fr !important; 
+		
+	  }
+}
+
+
+
+input[type=text], select, textarea, .formulario-inputs{
+	width: 100%;
+	padding: 12px;
+	border: 1px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	resize: vertical;
+  }
+
+.boton-form{
+	height: 45px; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	margin-bottom: 20px; 
+	margin-top: 10px; 	
+	text-transform: uppercase;
+	background-color: #4D3147; 
+	border-color: #4D3147; 
+	border-style: solid; 
+	border-radius: 10px;	
+	width: 420px;   
+    cursor: pointer;
+}
+
+
+button p{
+	color: #FFFBFF;
+    margin: 10px;
+}
+
+form span{
+	color: #0d0210; 
+}
+
+textarea{
+	background-color: #C9B7C7;
+}
+
+.aviso{
+	font-size: 13px;  
+	color: #000000;  
+}
+
+
+.formulario h1{
+	font-size: 2rem;  
+	text-align: letf; 
+	padding-bottom: 20px; 
+	color: #fffbff;
+}
+
+
+.formulario h3{
+	font-size: 1rem; 
+	padding-bottom: 30px;
+	color: #0D0210;   
+}
+
+::-webkit-input-placeholder {
+ color: #a8a8a8;
+}
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8;
+}
+
+.formulario input:focus{
+	outline:0;
+	border: 1px solid #C9B7C7;
+}
+.fecha{
+	margin-top:50px ;
+	margin-left:50px;
+}
+
+
+.formulario textarea:focus{
+	outline:0;
+	border: 1px solid #C9B7C7;
+}
+
+.iconsFooter{
+    filter: invert(90%);
+}
+
+.contact_form {	
+	padding: 30px !important;
+}
+
+.form-aside{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 10px;
+}
+
+.faqs{
+	margin-top: 80px;
+}
+
+@media (max-width: 600px){
+    .faqs p{
+        opacity: 0;
+        height: 0; /* Opcional si prefieres un efecto de deslizamiento */
+        overflow: hidden;
+        transition: opacity 0.5s ease, height 0.5s ease;
+    }
+    p.visible {
+        opacity: 1;
+        height: auto; /* O un valor fijo si prefieres que tenga una altura específica */
+    }
+    .faqs{
+        text-align: center;   
+    }
+    .aside{
+        height: auto;
+    }
+    .form-aside{
+        display: block;
+    }
+}

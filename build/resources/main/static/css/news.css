@@ -1,0 +1,44 @@
+.container {
+    display: flex; 
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.carousel-container {
+    flex: 0 0 30%; /* 30% width on larger screens */
+    max-width: 30%; 
+}
+
+.novedades {
+    flex: 1; /* 70% width on larger screens */
+    padding: 10px; 
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column; 
+}
+
+.novedad {
+    background-color: #4d3147; 
+    color: #fffbff;
+    padding: 4px;
+    border-radius: 4px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-weight: bold; 
+    flex: 1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .carousel-container {
+        flex: 0 0 100%; /* Full width on smaller screens */
+        max-width: 100%; 
+    }
+
+    .novedades {
+        flex: 0 0 100%; /* Full width on smaller screens */
+        max-width: 100%; 
+    }
+}

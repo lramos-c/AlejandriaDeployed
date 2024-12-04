@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Librería de Alejandría</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/legal.css">
+    <link rel="stylesheet" href="/css/preguntasFrecuentes.css">
+    <!-- Funcionalidad de carrito en la navbar -->
+    <link rel="stylesheet" href="/css/carrito.css">
+    <script defer src="/pages/JavaScript/carrito.js"></script>
+    <!-- Funcionalidad de carrito en la navbar (fin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer src="/pages/JavaScript/contacto.js"></script>
+    <script defer src="/pages/JavaScript/legal.js"></script>
+    <script defer src="/pages/JavaScript/preguntasFrecuentes.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <!-- Inicio del header -->
+  <header class="p-3  text-white" id="header">
+    <div class="head-container container-fluid ">
+      <a href="/">
+        <img src="/assets/Icons/logo_round.png" alt="" id="logo">
+      </a>
+      <div class="elements d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        
+
+        
+        <div class=" d-flex nav-component1">
+          <form class="search-bar-container">
+            <div class="dropdown">
+            <button class="burger-btn dropdown-toggle" data-bs-toggle="dropdown">
+                <span class="material-icons">menu</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Últimos vistos</a></li>
+              <li><a class="dropdown-item" href="#">Lista de deseos</a></li>
+              <li><a class="dropdown-item" href="#">Libros leídos</a></li>
+              <li><a class="dropdown-item" href="#">Recomendaciones personalizadas</a></li>
+
+            </ul>
+          </div>
+
+            <input type="search" class="form-control searchbar" placeholder="ISBN, Autor, Título..." aria-label="Search">
+            <button class="search-btn">
+                <span class="material-icons">search</span>
+            </button>
+        </form>
+
+        <div class="cart-container-shopping">
+          <button class="cart-btn">
+              <span class="material-icons">shopping_cart</span>
+              <span id="cart-count">0</span>
+          </button>
+          <div id="cart-dropdown" class="cart-dropdown">
+              <h3>Carrito</h3>
+              <ul id="cart-items" class="cart-items"></ul>
+              <button id="checkout-btn" onclick="location.href='/pages/HTML/shoppingCart.html'">Ir al carrito</button>
+          </div>
+      </div>          
+    </div>
+        <div class=" d-flex nav-component2">
+
+          <ul class="nav nav-underline">
+            <li class="nav-item dropdown mobile">
+              <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorías
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                <li><a class="dropdown-item" href="#">Artes</a></li>
+                <li><a class="dropdown-item" href="#">Ciencia</a></li>
+                <li><a class="dropdown-item" href="#">Ciencia Ficción</a></li>
+                <li><a class="dropdown-item" href="#">Cocina</a></li>
+                <li><a class="dropdown-item" href="#">Desarrollo Personal</a></li>
+                <li><a class="dropdown-item" href="#">Economía</a></li>
+                <li><a class="dropdown-item" href="#">Ficción</a></li>
+                <li><a class="dropdown-item" href="#">Historia</a></li>
+                <li><a class="dropdown-item" href="#">Literatura</a></li>
+                <li><a class="dropdown-item" href="#">Novela Gráfica</a></li>
+                <li><a class="dropdown-item" href="#">Poesía</a></li>
+                <li><a class="dropdown-item" href="#">Religión</a></li>
+                <li><a class="dropdown-item" href="#">Salud</a></li>
+                <li><a class="dropdown-item" href="#">Sociedad</a></li>
+                <li><a class="dropdown-item" href="#">Técnica</a></li>
+                <li><a class="dropdown-item" href="#">Viajes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/HTML/news.html">Lo más nuevo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/HTML/promotion.html">Promociones</a>
+            </li>
+            <li class="nav-item disabled">
+              <a class="nav-link disabled" aria-disabled="true"></a>
+            </li>
+            <li class="nav-item disabled">
+              <a class="nav-link disabled" aria-disabled="true"></a>
+            </li>
+            <li class="nav-item mobile">
+              <div class="dropdown">
+              <button class="nav-link d-flex align-items-center btn btn-light " type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                <i class="material-icons" style="margin-right: 0.3rem;">person</i>
+                Iniciar Sesión
+              </button>
+              <form class="dropdown-menu p-3 ">
+                <div class="mb-3">
+                  <label for="exampleDropdownFormEmail2" class="form-label">Correo electronico</label>
+                  <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@ejemplo.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleDropdownFormPassword2" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Contraseña">
+                </div>
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                    <label class="form-check-label" for="dropdownCheck2">
+                      Recuerdame
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary"> <a href="./pages/HTML/signUp.html"> Registrarse</a></button>
+              </form>
+            </div>
+            </li>
+          </ul>
+        
+        
+        </div>
+
+      </div>
+    </div>
+    
+  </header>
+<!-- Fin del header -->
+<div class="container">
+    <aside class="sidebar">
+        <!-- Box -->
+        <div class="box">
+            <h2><i class="fas fa-question-circle"></i> Preguntas Frecuentes</h2>
+            <ul class="preguntas">
+                <li data-section="comprar">¿Cómo compro un libro?</li>
+                <li data-section="mensual">¿Qué es la suscripción mensual?</li>
+                <li data-section="envio">¿Cuánto tarda en llegar mi producto</li>
+                <li data-section="formulario">¿Dónde está el formulario de registro?</li>
+            </ul>
+        </div>
+
+
+        <!-- Box para Contacto de ayuda -->
+        <div class="box">
+            <h3><i class="fas fa-headset"></i> Contacto de ayuda</h3>
+            <ul>
+                <li data-info="horario-info"><i class="fas fa-clock"></i> Horario</li>
+                <li data-info="escritos-info"><i class="fas fa-envelope"></i> Escríbenos</li>
+                <li data-info="llamanos-info"><i class="fas fa-phone"></i> Llámanos</li>
+            </ul>
+        </div>
+        <div>
+        <div class="message-box" id="message-box"></div>
+    </div>
+
+
+    </aside>
+
+
+        
+    <section class="content" id="content">
+        <h2>¿Cómo compro un libro en Librería de Alejandría?</h2>
+    <ol>
+        <li><strong>Decide qué libro deseas comprar</strong></li>
+        <p>En <strong>Librería de Alejandría</strong>, contamos con una amplia selección de libros en diversos géneros, desde ficción hasta no ficción, pasando por literatura clásica y novedades editoriales. Explora nuestra tienda en línea para encontrar el título o autor que más te interese.</p>
+        
+        <li><strong>Selecciona el libro físico que deseas</strong></li>
+        <ul>
+            <li>Solo ofrecemos libros en formato físico. Elige entre nuestras ediciones de tapa blanda o tapa dura.</li>
+            <li>Para cada título, encontrarás detalles sobre el formato, precio y una breve sinopsis para ayudarte a tomar tu decisión.</li>
+        </ul>
+        
+        <li><strong>Revisa el precio y las promociones disponibles</strong></li>
+        <ul>
+            <li>Los precios de todos nuestros libros están claramente indicados en el sitio. Si hay descuentos especiales o promociones, aparecerán en la página de cada libro.</li>
+            <li>Revisa nuestras ofertas de temporada o envíos gratis para pedidos superiores a una cierta cantidad.</li>
+        </ul>
+        
+        <li><strong>Añade el libro a tu carrito</strong></li>
+        <ul>
+            <li>Una vez que hayas elegido tu libro, selecciona el formato (si aplica) y añade el artículo a tu carrito de compras.</li>
+            <li>Si deseas comprar más libros, puedes continuar navegando y agregarlos al carrito antes de proceder al pago.</li>
+        </ul>
+        
+        <li><strong>Procede a la compra</strong></li>
+        <ul>
+            <li>Cuando tengas todo lo que deseas comprar en tu carrito, haz clic en "Finalizar compra". Aquí podrás ver un resumen de tu pedido antes de confirmar.</li>
+            <li>Introduce tu dirección de envío completa para asegurarte de que tu pedido llegue sin problemas.</li>
+        </ul>
+        
+        <li><strong>Realiza el pago de tu pedido</strong></li>
+        <ul>
+            <li>Para completar tu compra, selecciona el método de pago más conveniente para ti. Aceptamos tarjetas de crédito y débito, así como otros métodos de pago seguros.</li>
+            <li>Revisa que la información de tu pedido sea correcta antes de confirmar el pago. Una vez realizado, recibirás una confirmación de compra.</li>
+        </ul>
+        
+        <li><strong>Recibe tu libro en casa</strong></li>
+        <ul>
+            <li>Una vez procesado el pago, prepararemos tu pedido para el envío. Recibirás una notificación con los detalles de tu envío, incluida la fecha estimada de entrega.</li>
+            <li>Los plazos de entrega dependen de tu ubicación, pero generalmente los pedidos se envían dentro de [número] días hábiles.</li>
+            <li>Si el libro está disponible en stock, lo recibirás rápidamente en la dirección proporcionada.</li>
+        </ul>
+
+        <li><strong>Disfruta de tu lectura</strong></li>
+        <p>Una vez que recibas tu libro, ¡es hora de disfrutarlo! Si tienes alguna pregunta o necesitas asistencia, no dudes en contactarnos a través de nuestro servicio al cliente.</p>
+    </ol>
+</section>
+
+                
+</div>
+
+     <!-- Contenedor para mostrar el mensaje dinámico -->
+     
+
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top" id="footer">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+           <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+         <div class="iconos-redes"> 
+          <a href="https://www.facebook.com/"><img src="/assets/Icons/facebook.png" alt="Icono Facebook" class="iconsFooter"></a>
+          <a href="https://www.instagram.com/"><img src="/assets/Icons/instagram.png" alt="Icono Instagram" class="iconsFooter"></a>
+          <a href="https://x.com"><img src="/assets/Icons/twitter.png" alt="Icono Twitter" class="iconsFooter"></a>
+         </div>
+          <p class="fecha">Librería de Alejandría© 2024</p>
+        </div>
+      
+    
+      
+    
+        <div class="col mb-3">
+          <a href="/pages/HTML/aboutUs.html"><h5>Sobre Nosotros</h5></a>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="/pages/HTML/aboutUs.html" class="nav-link p-0 ">Misión</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/aboutUs.html" class="nav-link p-0 ">Visión</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/aboutUs.html" class="nav-link p-0 ">Nuestra Historia</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/aboutUs.html" class="nav-link p-0 ">Equipo</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/contact.html" class="nav-link p-0 ">Contáctanos</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5><a href="/pages/HTML/legal.html">Legal</a></h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="/pages/HTML/legal.html" class="nav-link p-0 ">Aviso de Privacidad</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/legal.html" class="nav-link p-0 ">Politicas de Devolución</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/legal.html" class="nav-link p-0 ">Acerca de Compras</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/legal.html" class="nav-link p-0 ">Politica de Cookies</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/legal.html" class="nav-link p-0 ">Términos y Condiciones</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/legal.html" class="nav-link p-0 ">Propiedad Intelectual</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+            <a href="/pages/HTML/preguntasFrecuentes.html"><h5>Preguntas Frecuentes</h5></a>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="/pages/HTML/preguntasFrecuentes.html" class="nav-link p-0 ">¿Cómo compro un libro?</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/preguntasFrecuentes.html" class="nav-link p-0 ">¿Qué es la suscripción mensual?</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/preguntasFrecuentes.htmlv" class="nav-link p-0 ">¿Cuánto tarda en llegar mi producto?</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/preguntasFrecuentes.html" class="nav-link p-0 ">¿Dónde está el formulario?</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/preguntasFrecuentes.html" class="nav-link p-0 ">Ayuda</a></li>
+          </ul>
+        </div>
+      </footer>
+</body>
+</html>

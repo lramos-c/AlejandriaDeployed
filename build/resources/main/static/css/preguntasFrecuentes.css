@@ -1,0 +1,131 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Contenedor principal que organiza la disposición del layout */
+.container {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que el layout se adapte a pantallas pequeñas */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #5c3b5c; /* Color de fondo del sidebar */
+    color: #ffffff;
+    padding: 20px;
+    width: 250px;
+    margin-right: 20px;
+    border-radius: 8px;
+    flex-shrink: 0; /* Evita que el sidebar se encoja */
+}
+
+/* Box dentro del sidebar */
+.box {
+    margin-bottom: 20px;
+}
+
+.box h2, .box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; /* Centra el ícono con el texto */
+}
+
+.box i {
+    margin-right: 10px; /* Añade espacio entre el icono y el texto */
+}
+
+/* Lista de elementos dentro del sidebar */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+/* Efecto hover sobre los elementos de la lista en el sidebar */
+.sidebar li:hover {
+    background-color: #7a4d7a; /* Cambia el color cuando el usuario pasa el ratón sobre ellos */
+    cursor: pointer;
+    padding-left: 5px; /* Añadir un pequeño efecto de desplazamiento */
+}
+
+/* Contenido principal */
+.content {
+    background-color: #d6cdd6; /* Color de fondo del contenido principal */
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 300px; /* Evita que se reduzca demasiado en pantallas pequeñas */
+}
+
+/* Título de la sección de contenido */
+.content h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Lista ordenada dentro del contenido */
+.content ol {
+    padding-left: 20px;
+}
+
+.content ol li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Estilos para los párrafos y listas desordenadas */
+.content p, .content ul {
+    margin-bottom: 15px;
+}
+
+.content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Estilos para el mensaje emergente */
+.message-box {
+    display: none; /* Inicialmente oculto */
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d6cdd6;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.message-box p {
+    margin: 0;
+    font-size: 16px;
+    color: black;
+}
+
+/* Responsividad: diseño adaptativo para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    /* La barra lateral se convierte en una sección que ocupa todo el ancho */
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* El contenedor principal toma todo el espacio disponible */
+    .container {
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+    }
+}
+
+i.fas.fa-question-circle {
+    font-size: 40px; /* Tamaño del icono */
+    color: #d6cdd6; /* Color azul */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+  }

@@ -1,0 +1,127 @@
+@media (max-width: 768px) {
+.container-admin {
+    flex-direction: column;
+    margin: 0 !important;
+}
+}
+
+
+
+.title-admin{
+    text-align: center;
+    margin-top: 20px;
+}
+.container-admin {
+    display: flex;
+    width: 100%;
+    margin: 20px ;
+    padding: 20px;
+    gap: 20px;
+}
+.form-section {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+.form-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.form-section label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.form-section input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-section button {
+    width: 48%;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    color: #efefef;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.form-section button[type="submit"] {
+    background-color: #28a745;
+    margin-right: 4%;
+}
+
+.form-section button[type="button"] {
+    background-color: #dc3545;
+}
+.list-section {
+    flex: 2;
+    padding: 20px;
+}
+.list-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 4fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#book-list li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#book-list li:hover {
+    background-color: #f9f9f9;
+}
+
+#book-list li img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#book-list li strong {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#book-list li button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #060404;
+}
+
+#book-list li button:first-child {
+    background-color: #1b0922;
+    margin-right: 5px;
+}
+
+#book-list li button:last-child {
+    background-color: #bbaee6;
+}
+
+#book-list li.active {
+    background-color: #efcbf1;
+    transform: scale(1.05);
+    border: 2px solid #33055d;
+}

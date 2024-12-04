@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+}
+
+/* Estilos para el aside */
+
+.asideAccount {
+    width: 20%;
+    min-width: 250px;
+    background-color: #866A80;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: calc(100vh - header-height);
+    position: sticky;
+    top: 0;
+}
+
+
+.avatar {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+.userName {
+    margin: 10px auto !important;
+    color: #FFFBFF !important;
+    font-size: 1.2rem;
+    text-align: center;
+    width: fit-content;
+}
+
+.blockButton {
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    background-color: #4D3147;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.blockButton .btn {
+    background-color: transparent;
+    color: #FFFBFF;
+    border: none;
+    text-align: left;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+
+.blockButton .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+
+/* Estilos para el contenido */
+
+.content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #FFFBFF;
+}
+
+
+/* Estilos para las secciones */
+
+.section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.section.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Estilos para las cards */
+
+#infoPersonal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+
+#infoPersonal .card {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh;
+    max-height: 30vh;
+}
+
+
+#infoPersonal .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text{
+    box-sizing: content-box;
+    word-wrap: break-all;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    main {
+        flex-direction: column;
+    }
+
+
+    .asideAccount {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .avatar {
+        width: 150px;
+    }
+
+    .blockButton {
+        width: 100%;
+    }
+
+    #infoPersonal {
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        gap: 15px;
+
+        padding: 15px;
+
+    }
+}

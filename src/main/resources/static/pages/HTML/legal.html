@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Librería de Alejandría</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/legal.css">
+    <!-- Funcionalidad de carrito en la navbar -->
+    <link rel="stylesheet" href="/css/carrito.css">
+    <script defer src="/pages/JavaScript/carrito.js"></script>
+    <!-- Funcionalidad de carrito en la navbar (fin) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer src="/pages/JavaScript/contacto.js"></script>
+    <script defer src="/pages/JavaScript/legal.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <header class="p-3  text-white" id="header">
+    <div class="head-container container-fluid ">
+      <a href="/">
+        <img src="/assets/Icons/logo_round.png" alt="" id="logo">
+      </a>
+      <div class="elements d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        
+
+        
+        <div class=" d-flex nav-component1">
+          <form class="search-bar-container">
+            <div class="dropdown">
+            <button class="burger-btn dropdown-toggle" data-bs-toggle="dropdown">
+                <span class="material-icons">menu</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Últimos vistos</a></li>
+              <li><a class="dropdown-item" href="#">Lista de deseos</a></li>
+              <li><a class="dropdown-item" href="#">Libros leídos</a></li>
+              <li><a class="dropdown-item" href="#">Recomendaciones personalizadas</a></li>
+
+            </ul>
+          </div>
+
+            <input type="search" class="form-control searchbar" placeholder="ISBN, Autor, Título..." aria-label="Search">
+            <button class="search-btn">
+                <span class="material-icons">search</span>
+            </button>
+        </form>
+
+        <div class="cart-container-shopping">
+          <button class="cart-btn">
+              <span class="material-icons">shopping_cart</span>
+              <span id="cart-count">0</span>
+          </button>
+          <div id="cart-dropdown" class="cart-dropdown">
+              <h3>Carrito</h3>
+              <ul id="cart-items" class="cart-items"></ul>
+              <button id="checkout-btn" onclick="location.href='/pages/HTML/shoppingCart.html'">Ir al carrito</button>
+          </div>
+      </div>          
+    </div>
+        <div class=" d-flex nav-component2">
+
+          <ul class="nav nav-underline">
+            <li class="nav-item dropdown mobile">
+              <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorías
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                <li><a class="dropdown-item" href="#">Artes</a></li>
+                <li><a class="dropdown-item" href="#">Ciencia</a></li>
+                <li><a class="dropdown-item" href="#">Ciencia Ficción</a></li>
+                <li><a class="dropdown-item" href="#">Cocina</a></li>
+                <li><a class="dropdown-item" href="#">Desarrollo Personal</a></li>
+                <li><a class="dropdown-item" href="#">Economía</a></li>
+                <li><a class="dropdown-item" href="#">Ficción</a></li>
+                <li><a class="dropdown-item" href="#">Historia</a></li>
+                <li><a class="dropdown-item" href="#">Literatura</a></li>
+                <li><a class="dropdown-item" href="#">Novela Gráfica</a></li>
+                <li><a class="dropdown-item" href="#">Poesía</a></li>
+                <li><a class="dropdown-item" href="#">Religión</a></li>
+                <li><a class="dropdown-item" href="#">Salud</a></li>
+                <li><a class="dropdown-item" href="#">Sociedad</a></li>
+                <li><a class="dropdown-item" href="#">Técnica</a></li>
+                <li><a class="dropdown-item" href="#">Viajes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/HTML/news.html">Lo más nuevo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/HTML/promotion.html">Promociones</a>
+            </li>
+            <li class="nav-item disabled">
+              <a class="nav-link disabled" aria-disabled="true"></a>
+            </li>
+            <li class="nav-item disabled">
+              <a class="nav-link disabled" aria-disabled="true"></a>
+            </li>
+            <li class="nav-item mobile">
+              <div class="dropdown">
+              <button class="nav-link d-flex align-items-center btn btn-light " type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                <i class="material-icons" style="margin-right: 0.3rem;">person</i>
+                Iniciar Sesión
+              </button>
+              <form class="dropdown-menu p-3 ">
+                <div class="mb-3">
+                  <label for="exampleDropdownFormEmail2" class="form-label">Correo electronico</label>
+                  <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@ejemplo.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleDropdownFormPassword2" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Contraseña">
+                </div>
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                    <label class="form-check-label" for="dropdownCheck2">
+                      Recuerdame
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary"> <a href="./pages/HTML/signUp.html"> Iniciar Sesion</a></button>
+                <button type="submit" class="btn btn-primary"> <a href="./pages/HTML/signUp.html"> Registrarse</a></button>
+              </form>
+            </div>
+            </li>
+          </ul>
+        
+        
+        </div>
+
+      </div>
+    </div>
+    
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+        <!-- Box para Políticas -->
+        <div class="box">
+            <h2><i class="fas fa-book"></i> Políticas de la librería</h2>
+            <ul class="terminos">
+                <li data-section="tyc">&gt; Términos y condiciones</li>
+                <li data-section="privacidad">&gt; Políticas de privacidad</li>
+                <li data-section="devolucion">&gt; Políticas de reembolsos y devoluciones.</li>
+                <li data-section="envios">&gt; Políticas de envíos</li>
+                <li data-section="cookies">&gt; Políticas de cookies</li>
+                <li data-section="intelectual">&gt; Propiedad intelectual</li>
+                <li data-section="pagos">&gt; Seguridad de pagos</li>
+                <li data-section="consumidores">&gt; Derechos de consumidores</li>
+                <li data-section="asuntos">&gt; Contacto de asuntos legales</li>
+            </ul>
+        </div>
+
+        <!-- Box para Contacto de ayuda -->
+        <div class="box">
+            <h3><i class="fas fa-headset"></i> Contacto de ayuda</h3>
+            <ul>
+                <li data-info="horario-info"><i class="fas fa-clock"></i> Horario</li>
+                <li data-info="escritos-info"><i class="fas fa-envelope"></i> Escríbenos</li>
+                <li data-info="llamanos-info"><i class="fas fa-phone"></i> Llámanos</li>
+            </ul>
+        </div>
+        <div>
+        <div class="message-box" id="message-box"></div>
+    </div>
+
+
+    </aside>
+
+
+        
+    <section class="content" id="content">
+        <h2>Términos y condiciones</h2>
+        <ol>
+            <li><strong>Aceptación de los Términos</strong></li>
+            <p>Al utilizar nuestro sitio, aceptas estos Términos y Condiciones en su totalidad. Si no estás de acuerdo, no utilices nuestros servicios.</p>
+            <li><strong>Uso del Sitio</strong></li>
+            <ul>
+                <li>El contenido de este sitio es solo para tu información y uso personal.</li>
+                <li>No puedes reproducir, duplicar, copiar, vender, revender ni explotar ninguna parte del sitio sin nuestro consentimiento expreso.</li>
+            </ul>
+            <li><strong>Registro de Usuario</strong></li>
+            <ul>
+                <li>Para realizar compras, es posible que necesites registrarte y crear una cuenta.</li>
+                <li>Eres responsable de mantener la confidencialidad de tu contraseña y de la información de tu cuenta.</li>
+            </ul>
+            <li><strong>Precios y Pagos</strong></li>
+            <ul>
+                <li>Todos los precios están en [moneda] y pueden cambiar sin previo aviso.</li>
+                <li>Aceptamos los siguientes métodos de pago: (lista de métodos de pago).</li>
+                <li>Todos los pedidos están sujetos a la disponibilidad de los productos.</li>
+            </ul>
+            <li><strong>Envío y Entrega</strong></li>
+            <ul>
+                <li>Procesamos los pedidos en un plazo de [número] días hábiles.</li>
+                <li>Los tiempos de entrega pueden variar según la ubicación y el método de envío seleccionado.</li>
+            </ul>
+            <li><strong>Devoluciones y Reembolsos</strong></li>
+            <ul>
+                <li>Puedes devolver productos dentro de [número] días de recibir tu pedido, siempre que estén en su estado original.</li>
+                <li>Para iniciar una devolución, contáctanos a [correo electrónico].</li>
+            </ul>
+        </ol>
+    </section>
+</div>
+
+     <!-- Contenedor para mostrar el mensaje dinámico -->
+     
+
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top" id="footer">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+           <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+         <div class="iconos-redes"> 
+          <a href="https://www.facebook.com/"><img src="/assets/Icons/facebook.png" alt="Icono Facebook" class="iconsFooter"></a>
+          <a href="https://www.instagram.com/"><img src="/assets/Icons/instagram.png" alt="Icono Instagram" class="iconsFooter"></a>
+          <a href="https://x.com"><img src="/assets/Icons/twitter.png" alt="Icono Twitter" class="iconsFooter"></a>
+         </div>
+          <p class="fecha">Librería de Alejandría© 2024</p>
+        </div>
+      
+    
+      
+    
+        <div class="col mb-3">
+          <a href="/pages/HTML/aboutUs.html"><h5>Sobre Nosotros</h5></a>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="/pages/HTML/aboutUs.html" class="nav-link p-0 ">Misión</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/aboutUs.html" class="nav-link p-0 ">Visión</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/aboutUs.html" class="nav-link p-0 ">Nuestra Historia</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/aboutUs.html" class="nav-link p-0 ">Equipo</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/contact.html" class="nav-link p-0 ">Contáctanos</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5><a href="">Legal</a></h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Aviso de Privacidad</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Politicas de Devolución</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Acerca de Compras</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Politica de Cookies</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Términos y Condiciones</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Propiedad Intelectual</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <a href="/pages/HTML/preguntasFrecuentes.html"><h5>Preguntas Frecuentes</h5></a>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="/pages/HTML/preguntasFrecuentes.html" class="nav-link p-0 ">¿Cómo compro un libro?</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/preguntasFrecuentes.html" class="nav-link p-0 ">¿Qué es la suscripción mensual?</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/preguntasFrecuentes.html" class="nav-link p-0 ">¿Cuánto tarda en llegar mi producto?</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/preguntasFrecuentes.html" class="nav-link p-0 ">¿Dónde está el formulario?</a></li>
+            <li class="nav-item mb-2"><a href="/pages/HTML/preguntasFrecuentes.html" class="nav-link p-0 ">Ayuda</a></li>
+          </ul>
+        </div>
+      </footer>
+</body>
+</html>
